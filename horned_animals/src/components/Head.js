@@ -6,7 +6,7 @@ class Head extends React.Component{
 
         return(
 
-            <p>hello world </p>
+            <h1>hello world </h1>
         )
     }
 }
