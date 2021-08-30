@@ -1,14 +1,29 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
+import dataArray from '../assets/data.json';
+console.log(dataArray);
+let newDataArray = dataArray.map((elemant) => {
+  return <HornedBeasts
+    imageUrl={elemant.image_url}
+    title={elemant.title}
+
+    description={elemant.description}
+    keyword={elemant.keyword}
+    horns={elemant.horns}
+  />
+
+}
+)
 
 class Main extends React.Component {
 
   render() {
-    return (
-      
-        <main>
 
-          <HornedBeasts
+    return (
+
+      <main>
+        {newDataArray}
+        {/* <HornedBeasts
             imageUrl="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg"
             title="UniWhal"
 
@@ -35,11 +50,11 @@ class Main extends React.Component {
             description="Someone wearing a creepy unicorn head mask"
             keyword="unicorn"
             horns="1"
-          />
+          /> */}
 
-        </main>
+      </main>
 
-      
+
 
 
 
