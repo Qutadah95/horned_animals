@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
 
 class HornedBeasts extends React.Component {
 
@@ -14,16 +14,16 @@ class HornedBeasts extends React.Component {
     this.setState({
       favaretCounter: this.state.favaretCounter + 1,
     });
-  }
-  // Props are attributes we are inheriting "extending" from the React.Component Class
-  // the props are Objects
+    this.props.handleShow();
 
-  // these props have keys that we define 
+  }
+  
   render() {
-    console.log('props: ', this.props);
+    // console.log('props: ', this.props);
+
     return (
-      <div>
-        <Card style={{ width: '18rem',  }}>
+      
+        <Card style={{ width: '18rem', }}>
           <Card.Img  variant="top" src={this.props.imageUrl} />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
@@ -44,7 +44,7 @@ class HornedBeasts extends React.Component {
         </Card>
        
 
-      </div>
+      
     )
   }
 }
