@@ -14,17 +14,17 @@ class HornedBeasts extends React.Component {
     this.setState({
       favaretCounter: this.state.favaretCounter + 1,
     });
-    this.props.handleShow();
-
+    
+    this.props.displayModel(this.props.title)
   }
   
+  
   render() {
-    // console.log('props: ', this.props);
 
     return (
       
-        <Card style={{ width: '18rem', }}>
-          <Card.Img  variant="top" src={this.props.imageUrl} />
+        <Card style={{ width: '18rem',display:'inline-block',margin:'15px' }}>
+          <Card.Img onClick={this.favoriteFunctions}  variant="top" src={this.props.imageUrl} />
           <Card.Body>
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>
