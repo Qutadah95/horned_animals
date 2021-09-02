@@ -5,27 +5,29 @@ import Footer from "./components/footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import dataArray from './assets/data.json';
 import SelectedBeast from "./components/SelectedBeast";
+import Form from "./components/form"
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
-      SelectedBeast:{},
-      state:false,
+    this.state = {
+      SelectedBeast: {},
+      state: false,
     }
   }
-  displayModel=(title)=>{
-    const tempSelectedBeast=dataArray.filter((item)=>{
-      return (item.title===title);
+
+  displayModel = (title) => {
+    const tempSelectedBeast = dataArray.filter((item) => {
+      return (item.title === title);
     });
     this.setState({
-      show:true,
-      SelectedBeast:tempSelectedBeast[0],
+      show: true,
+      SelectedBeast: tempSelectedBeast[0],
     })
   }
-  
-  handleClose= () =>{
-    this.setState({show:false})
+
+  handleClose = () => {
+    this.setState({ show: false })
   }
 
   render() {
@@ -33,33 +35,36 @@ class App extends React.Component {
     return (
 
       <div>
-        
-      
-      <Head/> 
-        
-        
-      
-      <Main 
-      dataArray={dataArray}
-      displayModel={this.displayModel}
 
-      />
-    < SelectedBeast
-       SelectedBeast={this.state.SelectedBeast}
-       show={this.state.show}
-       handleClose={this.handleClose}
-        
+
+        <Head />
+
+
+        <Form
+          dataArray={dataArray}
+          displayModel={this.displayModel}
+        />
+        <Main
+          dataArray={dataArray}
+          displayModel={this.displayModel}
 
         />
-        
-        
-      
-      <Footer/>
-    
-        
+        < SelectedBeast
+          SelectedBeast={this.state.SelectedBeast}
+          show={this.state.show}
+          handleClose={this.handleClose}
+
+
+        />
+
+
+
+        <Footer />
+
+
       </div>
-     
-      
+
+
     );
   }
 }
