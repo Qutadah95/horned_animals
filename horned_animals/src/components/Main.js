@@ -1,18 +1,21 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-
+import Form from "./form"
 
 class Main extends React.Component {
-  
+ 
+ 
+
 
   render() {
     return (
-
+      
       <main>
    
    { this.props.dataArray.map((elemant) => {
-    return (
-      
+     
+     return (
+       
     <HornedBeasts
       imageUrl={elemant.image_url}
       title={elemant.title}
@@ -27,6 +30,11 @@ class Main extends React.Component {
     )
   }
   )}
+
+  {/* <Form  
+  
+  displayForm={this.displayForm}
+  /> */}
 
 </main>
 
