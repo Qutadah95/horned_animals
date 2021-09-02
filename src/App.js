@@ -1,11 +1,11 @@
 import React from "react";
 import Main from "./components/Main";
-import Head from "./components/Head"
+import Head from "./components/Head";
 import Footer from "./components/footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import dataArray from './assets/data.json';
 import SelectedBeast from "./components/SelectedBeast";
-import Form from "./components/form"
+import Form from "./components/form";
 
 class App extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class App extends React.Component {
     this.state = {
       SelectedBeast: {},
       state: false,
-    }
+    };
   }
 
   displayModel = (title) => {
@@ -23,11 +23,11 @@ class App extends React.Component {
     this.setState({
       show: true,
       SelectedBeast: tempSelectedBeast[0],
-    })
+    });
   }
 
   handleClose = () => {
-    this.setState({ show: false })
+    this.setState({ show: false });
   }
 
   render() {

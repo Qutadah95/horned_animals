@@ -1,6 +1,6 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-import Form from "./form"
+// import Form from "./form";
 
 class Main extends React.Component {
  
@@ -27,7 +27,7 @@ class Main extends React.Component {
       
     />
     
-    )
+    );
   }
   )}
 
@@ -42,7 +42,7 @@ class Main extends React.Component {
 
 
 
-    )
+    );
   }
 }
 

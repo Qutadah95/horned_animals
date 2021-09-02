@@ -5,7 +5,7 @@ render(){
     return(
 
         <h2>&copy;Qutadah Almomani </h2>
-    )
+    );
 }
 
 }
