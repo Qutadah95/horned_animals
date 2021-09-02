@@ -1,12 +1,12 @@
 import React from "react";
-import Form from 'react-bootstrap/Form'
-import dataArrayy from "../assets/data.json"
+import Form from 'react-bootstrap/Form';
+import dataArrayy from "../assets/data.json";
 class FormData extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
           data: dataArrayy,
-        }
+        };
       }
       
 
@@ -23,7 +23,7 @@ class FormData extends React.Component{
         
         const tempSelectedBeast=dataArrayy.filter((item)=>{
             
-            return item.horns==horns;
+            return item.horns===horns;
             
         });
        console.log(tempSelectedBeast);
@@ -54,7 +54,7 @@ render(){
 
         </>
         
-    )
+    );
 }
 
 }

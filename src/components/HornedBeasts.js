@@ -6,7 +6,7 @@ class HornedBeasts extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { favaretCounter: 0, }
+    this.state = { favaretCounter: 0, };
   }
 
   favoriteFunctions = () => {
@@ -15,7 +15,7 @@ class HornedBeasts extends React.Component {
       favaretCounter: this.state.favaretCounter + 1,
     });
     
-    this.props.displayModel(this.props.title)
+    this.props.displayModel(this.props.title);
   }
   
   
@@ -45,7 +45,7 @@ class HornedBeasts extends React.Component {
        
 
       
-    )
+    );
   }
 }
 
