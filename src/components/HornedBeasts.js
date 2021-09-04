@@ -19,8 +19,9 @@ class HornedBeasts extends React.Component {
   }
   
   
+  
   render() {
-
+    console.log(this.props.hornsData);
     return (
       
         <Card style={{ width: '18rem',display:'inline-block',margin:'15px' }}>
