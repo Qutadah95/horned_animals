@@ -5,7 +5,8 @@ import Footer from "./components/footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import dataArray from './assets/data.json';
 import SelectedBeast from "./components/SelectedBeast";
-import Form from "./components/form";
+
+
 
 class App extends React.Component {
   constructor(props) {
@@ -13,6 +14,7 @@ class App extends React.Component {
     this.state = {
       SelectedBeast: {},
       state: false,
+      hornsData: dataArray,
     };
   }
 
@@ -30,8 +32,27 @@ class App extends React.Component {
     this.setState({ show: false });
   }
 
+  updatingFilterData = (filteredData) => {
+    if (filteredData.length > 0) {
+      this.setState({
+        hornsData: filteredData,
+  
+      });
+  
+    }else{
+      this.setState({
+        hornsData: dataArray,
+  
+      });
+    }
+    
+
+  }
+
   render() {
-    console.log(this.state);
+    console.log('hello', this.state.hornsData);
+   
+
     return (
 
       <div>
@@ -40,13 +61,12 @@ class App extends React.Component {
         <Head />
 
 
-        <Form
-          dataArray={dataArray}
-          displayModel={this.displayModel}
-        />
+       
         <Main
-          dataArray={dataArray}
+          dataArray={this.state.hornsData}
           displayModel={this.displayModel}
+          updatingFilterData={this.updatingFilterData}
+          
 
         />
         < SelectedBeast
@@ -56,8 +76,7 @@ class App extends React.Component {
 
 
         />
-
-
+       
 
         <Footer />
 
